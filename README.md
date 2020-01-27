@@ -7,4 +7,7 @@ Minimal React/Redux app to use as a boilerplate
 - SignUp
 - SignOut
 
+### Using
+- Token authentification with jwt
+
 Working with https://github.com/leolassence/node-auth-app
