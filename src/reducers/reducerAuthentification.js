@@ -1,4 +1,4 @@
-import { SET_AUTHENTIFICATIONS } from '../actions/action-types';
+import { SET_AUTHENTIFICATIONS } from '../actionCreators/actionTypes';
 
 const initialState = {
   isLoggedIn: false

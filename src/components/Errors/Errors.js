@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
-import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-
-import { parseError, resetError } from '../actions';
 
 class Errors extends Component {
   UNSAFE_componentWillUpdate(nextProps) {
@@ -24,17 +19,6 @@ class Errors extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  error: state.errors.message
-});
-
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators({
-    parseError,
-    resetError
-  }, dispatch)
-});
-
 Errors.defaultProps = {
   location: {
     pathname: '/'
@@ -50,4 +34,4 @@ Errors.propTypes = {
   error: PropTypes.string
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Errors));
+export default Errors;

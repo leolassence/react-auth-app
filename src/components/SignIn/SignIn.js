@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Field } from 'react-final-form';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
-
-import { signInUser } from '../actions';
 
 
 class SignIn extends Component {
@@ -76,12 +72,6 @@ class SignIn extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators({
-    signInUser
-  }, dispatch)
-});
-
 SignIn.propTypes = {
   history: PropTypes.shape({}),
   signInUser: PropTypes.func.isRequired
@@ -91,4 +81,4 @@ SignIn.defaultProps = {
   history: {}
 };
 
-export default connect(null, mapDispatchToProps)(SignIn);
+export default SignIn;

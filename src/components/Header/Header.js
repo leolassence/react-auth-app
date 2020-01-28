@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
-import { setAuthentification, signOutUser } from '../actions';
 
 class Header extends Component {
   renderAuthentificationLink = () => {
@@ -48,20 +45,9 @@ class Header extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isLoggedIn: state.authentification.isLoggedIn
-});
-
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators({
-    setAuthentification,
-    signOutUser
-  }, dispatch)
-});
-
 Header.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   signOutUser: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

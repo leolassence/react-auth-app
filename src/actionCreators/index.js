@@ -4,7 +4,7 @@ import {
   SET_AUTHENTIFICATIONS,
   PARSE_ERROR,
   RESET_ERROR
-} from './action-types';
+} from './actionTypes';
 
 const API_ENDPOINT = 'http://localhost:8080';
 

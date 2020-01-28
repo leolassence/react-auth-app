@@ -1,4 +1,4 @@
-import { PARSE_ERROR, RESET_ERROR } from '../actions/action-types';
+import { PARSE_ERROR, RESET_ERROR } from '../actionCreators/actionTypes';
 
 const initialState = {
   message: ''

@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import { Form, Field } from 'react-final-form';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
-import { signUpUser } from '../actions';
 import {
   required,
   minValue,
   composeValidators,
   isEmail,
   validatePassword,
-} from '../helpers/formvalidation';
+} from '../../assets/helpers/formvalidation';
 
 
 class SignUp extends Component {
@@ -88,12 +85,6 @@ class SignUp extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  ...bindActionCreators({
-    signUpUser
-  }, dispatch)
-});
-
 SignUp.propTypes = {
   history: PropTypes.shape({}),
   signUpUser: PropTypes.func.isRequired
@@ -103,4 +94,4 @@ SignUp.defaultProps = {
   history: {}
 };
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default SignUp;

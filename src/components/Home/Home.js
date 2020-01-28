@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Home extends Component {
@@ -37,12 +36,8 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isLoggedIn: state.authentification.isLoggedIn
-});
-
 Home.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired
 };
 
-export default connect(mapStateToProps, null)(Home);
+export default Home;
