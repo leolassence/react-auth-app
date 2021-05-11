@@ -15,7 +15,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint-plugin-react-redux": "^3.0.3",
     "final-form": "^4.18.6",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
